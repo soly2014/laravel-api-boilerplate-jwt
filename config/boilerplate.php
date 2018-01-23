@@ -7,12 +7,12 @@ return [
 
         // this option must be set to true if you want to release a token
         // when your user successfully terminates the sign-in procedure
-        'release_token' => env('SIGN_UP_RELEASE_TOKEN', false),
+        'release_token' => env('SIGN_UP_RELEASE_TOKEN', true),
 
         // here you can specify some validation rules for your sign-in request
         'validation_rules' => [
             'name' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users',
             'password' => 'required'
         ]
     ],

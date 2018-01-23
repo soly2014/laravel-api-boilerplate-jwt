@@ -11,6 +11,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ForgotPasswordController extends Controller
 {
+    
     public function sendResetEmail(ForgotPasswordRequest $request)
     {
         $user = User::where('email', '=', $request->get('email'))->first();
